@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* apply on whole body */
+body {
+    background-color: black;
+    --best:rgb(224, 165, 56);
+    font-family: montserrat;
+}
+
+/* navbar and navbar items */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(27, 27, 27);
+    height: 50px;
+    border-radius: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    position: fixed;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.logo {
+    color: white;
+    padding-top: 30px;
+    height: 50px;
+    margin-left: 0px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 32vw;
+}
+
+.search-input {
+    width: 300px;
+    height: 20px;
+    padding: 10px 30px 10px 10px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: black;
+    cursor: pointer;
+}
+
+.search-icon:hover {
+    color: var(--best);
+}
+
+
+.buttons {
+    display: flex;
+}
+
+.buttons button {
+    margin-left: 2px;
+    border-radius: 30px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    background-color: var(--best);
+    border: none;
+    color: black;
+}
+
+.buttons button:hover {
+    background-color: rgba(35, 35, 35, 0.795);
+    color: white;
+}
+
+.search-input::placeholder {
+    color: #0f0e0e;
+}
+
+/* big container which contains everything */
+
+/* 1.  sidebar */
+.container {
+    position: relative;
+    padding-top: 70px;
+    padding-left: 70px;
+    padding-right: 50px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(35, 35, 35, 0.795);
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.sidebar ul li {
+    margin-top: 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 200px;
+    color: white;
+}
+
+.sidebar ul li a:hover {
+    color:var(--best);
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+/* 2.content */
+
+.content {
+    padding: 20px;
+    min-height: calc(100vh - 50px);
+}
+
+/* 2.1 */
+.arrow {
+    position: fixed;
+    top: 15%;
+    left: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    background-color: #333;
+    z-index: 9999;
+    border-radius: 10px;
+}
+
+/* 2.2 */
+
+
+/* 2.2.1 */
+.welcome {
+    color: white;
+    margin-top: 5px;
+    
+}
+
+.search-container-main {
+    display: flex;
+    align-items: center;
+    margin-top: 7%;
+    margin-left: 15%;
+}
+
+.search-input-main {
+    width: 60vw;
+    height: 25px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 30px;
+    
+    color: black;
+    padding-left: 30px;
+}
+
+.search-input-main::placeholder {
+    color: black;
+}
+
+.search-button-main {
+    color:black;
+    background-color: var(--best);
+    cursor: pointer;
+    margin-left: -80px;
+    border-radius: 40px;
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.search-button-main:hover {
+    background-color: black;
+
+    color: white;
+}
+
+.favorite-icon {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.favorite-icon.active {
+    color: red;
+}
+
+.favorite {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 60%;
+    margin-top: 5%;
+}
+
+.check {
+    border-radius: 30px;
+    height: 50px;
+    background-color: var(--best);
+    margin-left: 25px;
+    border: none;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.check:hover {
+    color: white;
+    background-color: rgba(35, 35, 35, 0.795);
+}
+
+/* 2.3 movie section*/
+.movies-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: rgba(35, 35, 35, 0.795);
+   
+}
+
+/* 2.3.1 */
+.movie-card {
+    background-color: rgba(35, 35, 35, 0.795);
+    margin: 15px 15px 15px 15px;
+    transition: transform 0.3s ease;
+    height: 500px;
+    width: 200px;
+    cursor: pointer;
+    position: relative;
+    color: white;
+}
+
+.movie-card:hover {
+    transform: scale(1.1);
+}
+
+/* 2.4 review section */
+.review-section
+{
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(35, 35, 35, 0.795);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://ak7.picdn.net/shutterstock/videos/4043077/thumb/1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* 2.5 img-2 */
+.img2{
+    background-image: url('https://th.bing.com/th/id/R.2c7ffa9af7403687a5864659b30ca09d?rik=gaV%2bHk7zUb55%2fQ&riu=http%3a%2f%2f3.bp.blogspot.com%2f-TZULYpEc4YQ%2fTc2fVCyvfBI%2fAAAAAAAAeqo%2f0NCuW26MorI%2fs1600%2fCine.Cinema.12.jpg&ehk=%2b6WhSRRYJxeuof3bXX2ZDoou%2bDsX%2fjLGGf0U%2bfWeH68%3d&risl=&pid=ImgRaw&r=0');
+    background-size: cover;
+    background-position: center;
+}
+.about-section {
+    padding: 50px 20px;
+    background-color: rgba(35, 35, 35, 0.795);
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-section {
+    padding: 50px 20px;
+    background-color: rgba(35, 35, 35, 0.795);
+    color: #fff;
+    text-align: center;
+}
+
+.contact-section p {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+    color: #fff;
+}
+
+.contact-form textarea::placeholder {
+    color: #0f0e0e;
+}
+
+.contact-form input[type="submit"] {
+    width: 25%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--best);
+    color: BLACK;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: rgba(35, 35, 35, 0.795);
+    color: white;
+}
+
+.footer {
+    background-color: rgba(35, 35, 35, 0.795);
+    height: 130px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.social-media ul {
+    list-style: none;
+    display: flex;
+    margin-left: 35%;
+    font-size: 30px;
+}
+
+.social-media ul li a {
+    text-decoration: none;
+   
+    
+}
+
+.social-media ul li a i {
+    color: white;
+    margin: 10px;
+}
+
+.social-media ul li a i:hover {
+    color: var(--best);
+}
+
+.imp ul {
+    list-style: none;
+    display: flex;
+    margin-left: 34.6%;
+    font-size: 25px;
+}
+
+.imp ul li {
+    color: white;
+    margin: 0px;
+}
+
+.imp ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+}
+
+.imp ul li :hover {
+    color:var(--best);
+}
+
+/* ex */
+
+.star.filled {
+    color: yellow;
+}
+
+
+
+.review-card {
+    background-color: rgba(35, 35, 35, 0.795);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+    text-align: center;
+}
+
+.review-card p {
+    margin: 5px 0;
+}
+
+.delete-review-btn {
+    background-color:var(--best);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-review-btn:hover {
+    color:black;
+}
+
+
+/* //////// */
+
+@media (max-width: 767px) {
+    
+    .footer {
+      display: none;
+    }
+  }
+
+@media (max-width:767px)
+{
+    .buttons button {
+        margin-left: 2px;
+        border-radius: 30px;
+        height: 50px;
+        width: 100px;
+        cursor: pointer;
+        background-color: var(--best);
+        border: none;
+        color: black;
+    }
+    
+    .buttons button:hover {
+        background-color: rgba(35, 35, 35, 0.795);
+        color: white;
+    }
+
+
+
+    .logo {
+        color: white;
+        padding-top: 30px;
+        height: 40px;
+        margin-left: 0px;
+    }
+    
+    .search-container {
+        
+        display: none;
+        
+    }
+    
+    .search-input {
+        display: none;
+    }
+    
+    .search-icon {
+       display: none;
+    }
+
+    
+   
+    
+    
+} 
+
+
+@media (min-width:767px)
+{
+    .search-container {
+        
+        display: none;
+        
+    }
+    
+    .search-input {
+        display: none;
+    }
+    
+    .search-icon {
+       display: none;
+    }
+
+
+}
