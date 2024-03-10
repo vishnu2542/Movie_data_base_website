@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .about-section {
+    padding: 50px 20px;
+    background-color: rgba(35, 35, 35, 0.795);
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-section {
+    padding: 50px 20px;
+    background-color: rgba(35, 35, 35, 0.795);
+    color: #fff;
+    text-align: center;
+}
+
+.contact-section p {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+    color: #fff;
+}
+
+.contact-form textarea::placeholder {
+    color: #0f0e0e;
+}
+
+.contact-form input[type="submit"] {
+    width: 25%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    color: BLACK;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: rgba(35, 35, 35, 0.795);
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <div class="about-section" id="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to Stream Studio! We provide a vast collection of movies for you to explore and enjoy. Our
+            mission is to deliver the best streaming experience to our users.</p>
+    </div>
+
+    <div class="contact-section" id="contact-us">
+        <h2>Contact Us</h2>
+        <p>Have any questions or feedback? Feel free to get in touch with us using the form below:</p>
+        <div class="contact-form">
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
